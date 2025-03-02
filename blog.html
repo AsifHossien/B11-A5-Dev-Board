@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev-Board</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-100">
+    <nav class="w-10/12 mx-auto">
+        <div class="navbar bg-base-100 shadow-sm px-4 rounded-xl">
+            <div class="navbar-start">
+                <img class="w-10" src="assets/logo.png" alt="">
+                <h1 class="text-xl pl-2">Dev<span class="font-bold">Board</span></h1>
+            </div>
+            <div class="navbar-end">
+                <a href="index.html" class="btn btn-primary font-semibold">Back to Desk</a>
+            </div>
+        </div>
+    </nav>
+    <section class="w-10/12 mx-auto py-5">
+        <h1 class="text-center font-bold text-3xl mb-5">Blogs</h1>
+        <div class="bg-white rounded-3xl p-5 mb-5">
+            <h1 class="font-bold text-2xl">Question-1: What are the different ways to select an element in the DOM?</h1>
+            <hr class="py-3">
+            <p>There are as much as 5 different ways to select an element in the DOM such as :</p>
+            <ul>
+                <li>1. getElementById.</li>
+                <li>2. getElementsByClassName.</li>
+                <li>3. getElementsByTagName.</li>
+                <li>4. querySelector.</li>
+                <li>5. querySelectorAll.</li>
+            </ul>
+        </div>
+        <div class="bg-white rounded-3xl p-5 mb-5">
+            <h1 class="font-bold text-2xl">Question-2: What is the difference between innerHTML, innerText, and textContent?</h1>
+            <hr class="py-3">
+            <p>innerHTML allows us to see exactly what is in the HTML markup contained within a string, including elements like spacing, line breaks and formatting.innerText property sets or returns the text content as plain text of the specified node, and all its descendants whereas the innerHTML property gets and sets the plain text or HTML contents in the elements. Unlike innerText, inner HTML let us work with HTML rich text and does not automatically encode and decode text. For getting all the text from an element, including what's not visible, textContent is your go-to. It ignores CSS, so we get the raw text without any styling.</p>
+        </div>
+        <div class="bg-white rounded-3xl p-5 mb-5">
+            <h1 class="font-bold text-2xl">Question-3: What is event delegation in the DOM?</h1>
+            <hr class="py-3">
+            <p>Event Delegation is a pattern to handle events efficiently. Instead of adding an event listener to each and every similar element, we can add an event listener to a parent element and call an event on a particular target using the .target property of the event object.</p>
+        </div>
+        <div class="bg-white rounded-3xl p-5 mb-5">
+            <h1 class="font-bold text-2xl">Question-4: What is event bubbling in the DOM?</h1>
+            <hr class="py-3">
+            <p>Event bubbling is a type of DOM event propagation where the event first triggers on the innermost target element, and then successively triggers on the ancestors (parents) of the target element in the same nesting hierarchy till it reaches the outermost DOM element</p>
+        </div>
+        <div class="bg-white rounded-3xl p-5 mb-5">
+            <h1 class="font-bold text-2xl">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
+            <hr class="py-3">
+            <p>We can create an element by using document.createElement("") property. To add it we can use .appendChild() property. To remove an element we can use remove() property.</p>
+        </div>
+    </section>
+
+</body>
+
+</html>

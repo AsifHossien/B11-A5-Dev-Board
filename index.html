@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev-Board</title>
+    <style>
+        .activityLogContainer {
+            width: 100%;
+            max-width: 400px;
+            border: 2px solid #ccc;
+            margin-bottom: 5px;
+            padding: 10px;
+            border-radius: 8px;
+            background: #f9f9f9;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100">
+    <nav class="w-10/12 mx-auto">
+        <div class="navbar bg-base-100 shadow-sm px-4 rounded-xl">
+            <div class="navbar-start">
+                <img class="w-10" src="assets/logo.png" alt="">
+                <h1 class="text-xl pl-2">Dev<span class="font-bold">Board</span></h1>
+            </div>
+            <div class="navbar-end flex gap-5">
+                <div class="flex justify-center items-center gap-2 bg-slate-100 px-4 py-2 rounded-3xl">
+                    <img class="w-8" src="assets/checkbox.png" alt="" srcset="">
+                    <p id="navTaskCount" class="font-bold text-3xl">22</p>
+                </div>
+                <div class="bg-slate-100 rounded-full p-2">
+                    <button onclick="changeBgColor()"><img src="assets/theme-btn.png" alt=""></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="w-10/12 mx-auto mt-10 pt-4 flex gap-3">
+        <div class="w-3/4 p-4 rounded-xl  bg-white flex-col gap-3">
+            <div class="flex gap-3 items-center justify-center">
+                <div class="w-1/4 bg-slate-100 flex justify-between p-4 items-center rounded-xl">
+                    <div class="bg-white rounded-full p-2"><img src="assets/checkbox.png" alt=""></div>
+                    <div class="flex-col">
+                        <p>Task Assigned</p>
+                        <h2 id="taskAssignedCount" class="text-xl font-bold">06</h2>
+                    </div>
+                </div>
+                <div class="w-2/4 rounded-xl p-4 bg-gradient-to-r from-[#3752fd] via-[#6c7ffa] to-[#9ba8f8] flex items-center">
+                    <img class="w-14 mr-3" src="assets/board.png" alt="">
+                    <a href="blog.html" class="text-white text-xl font-bold">Discover Something New Today!</a>
+                </div>
+                <div class="w-1/4 bg-slate-100 flex justify-between p-4 items-center rounded-xl">
+                    <div class="bg-white rounded-full p-2"><img src="assets/calender.png" alt=""></div>
+                    <div>
+                        <p id="current-date" class="text-xl font-bold pl-5"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-3 gap-5 mt-5" id="taskContainer">
+                <div class="rounded-xl bg-slate-100 flex-col p-4 task-card">
+                    <div class="bg-white p-2 rounded-xl w-24 text-center">
+                        <h3>ShopEase</h3>
+                    </div>
+                    <div>
+                        <h2 class="font-bold text-xl py-3 task-title">Fix Mobile Button Issue</h2>
+                    </div>
+                    <div class="bg-white p-2 rounded-xl">
+                        <p>Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly.
+                        </p>
+                    </div>
+                    <div class="flex justify-between items-center mt-3">
+                        <div class="flex-col">
+                            <p>Deadline</p>
+                            <h2>21 March 2025</h2>
+                        </div>
+                        <button class="btn btn-primary completed-btn">Completed</button>
+                    </div>
+                </div>
+                <div class="rounded-xl bg-slate-100 flex-col p-4 task-card">
+                    <div class="bg-white p-2 rounded-xl w-24 text-center">
+                        <h3>CloudSync</h3>
+                    </div>
+                    <div>
+                        <h2 class="font-bold text-xl py-3 task-title">Add Dark Mode</h2>
+                    </div>
+                    <div class="bg-white p-2 rounded-xl">
+                        <p>Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.
+                        </p>
+                    </div>
+                    <div class="flex justify-between items-center mt-3">
+                        <div class="flex-col">
+                            <p>Deadline</p>
+                            <h2>21 March 2025</h2>
+                        </div>
+                        <button class="btn btn-primary completed-btn">Completed</button>
+                    </div>
+                </div>
+                <div class="rounded-xl bg-slate-100 flex-col p-4 task-card">
+                    <div class="bg-white p-2 rounded-xl w-24 text-center">
+                        <h3>SwiftPay</h3>
+                    </div>
+                    <div>
+                        <h2 class="font-bold text-xl py-3 task-title">Optimize Home page</h2>
+                    </div>
+                    <div class="bg-white p-2 rounded-xl">
+                        <p>Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly.
+                        </p>
+                    </div>
+                    <div class="flex justify-between items-center mt-3">
+                        <div class="flex-col">
+                            <p>Deadline</p>
+                            <h2>21 March 2025</h2>
+                        </div>
+                        <button class="btn btn-primary completed-btn">Completed</button>
+                    </div>
+                </div>
+                <div class="rounded-xl bg-slate-100 flex-col p-4 task-card">
+                    <div class="bg-white p-2 rounded-xl w-24 text-center">
+                        <h3>Meta</h3>
+                    </div>
+                    <div>
+                        <h2 class="font-bold text-xl py-3 task-title">Add new emoji 🤲</h2>
+                    </div>
+                    <div class="bg-white p-2 rounded-xl">
+                        <p>Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.
+                        </p>
+                    </div>
+                    <div class="flex justify-between items-center mt-3">
+                        <div class="flex-col">
+                            <p>Deadline</p>
+                            <h2>21 March 2025</h2>
+                        </div>
+                        <button class="btn btn-primary completed-btn">Completed</button>
+                    </div>
+                </div>
+                <div class="rounded-xl bg-slate-100 flex-col p-4 task-card">
+                    <div class="bg-white p-2 rounded-xl w-28 text-center">
+                        <h3>Google LLC</h3>
+                    </div>
+                    <div>
+                        <h2 class="font-bold text-xl py-3 task-title">Integrate OpenAI API</h2>
+                    </div>
+                    <div class="bg-white p-2 rounded-xl">
+                        <p>Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly.
+                        </p>
+                    </div>
+                    <div class="flex justify-between items-center mt-3">
+                        <div class="flex-col">
+                            <p>Deadline</p>
+                            <h2>21 March 2025</h2>
+                        </div>
+                        <button class="btn btn-primary completed-btn">Completed</button>
+                    </div>
+                </div>
+                <div class="rounded-xl bg-slate-100 flex-col p-4 task-card">
+                    <div class="bg-white p-2 rounded-xl w-24 text-center">
+                        <h3>Glassdoar</h3>
+                    </div>
+                    <div>
+                        <h2 class="font-bold text-xl py-3 task-title">Improve Job searching</h2>
+                    </div>
+                    <div class="bg-white p-2 rounded-xl">
+                        <p>Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.
+                        </p>
+                    </div>
+                    <div class="flex justify-between items-center mt-3">
+                        <div class="flex-col">
+                            <p>Deadline</p>
+                            <h2>21 March 2025</h2>
+                        </div>
+                        <button class="btn btn-primary completed-btn">Completed</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-1/4 rounded-xl bg-white p-5 flex flex-col" >
+            <div class="flex justify-center items-center gap-3 mb-3">
+                <img src="assets/activity.png" alt="" srcset="">
+                <h1 class="font-semibold">Activity Log</h1>
+            </div>
+            <button id="clearBtn" class="btn btn-primary w-3/5 mx-auto text-xl font-semibold">Clear History</button>
+            <hr class="m-3">
+            <div id="activityLog"></div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

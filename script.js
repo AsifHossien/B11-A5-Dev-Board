@@ -37,14 +37,12 @@ taskContainer.addEventListener('click', function (event) {
         }
 
         let currentTime = new Date().toLocaleTimeString();
-        let clickedLog = document.createElement("p");
+        let clickedLog = document.createElement('p');
         clickedLog.innerText = `You have completed the task ${taskHeading} - ${currentTime}`;
         activityLog.appendChild(clickedLog);
-        clickedLog.classList.add('activityLogContainer')
+        clickedLog.classList.add('activityLogContainer');
         if (assignedCount === 0) {
-            setTimeout(() => {
-                alert("Congrats ! You have completed all the tasks");
-            }, 50);
+            alert("Congrats ! You have completed all the tasks");
         }
         button.disabled = true;
     }
